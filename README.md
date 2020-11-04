@@ -5,7 +5,7 @@ This series explores the  ways in which IF ELSE-IF chains and Loops can be avoid
 
 Why?
 
-"If Statements" are evil. They can be nested and nested to create what is  known as the 'ladder to hell'. This make sthe code hard to test. There are functional programming techniques that allow one to avoid if statements and loops to a large degree.
+"If Statements" are evil. They can be nested, nested, and nested again, to create what is  known as the 'ladder to hell'. This makes the code hard to test. There are functional programming techniques that allow one to avoid if statements and loops to a large degree.
 
 
 The folder GroupBy contains the code written in various languages for grouping cart items by category and creating sub-totals.

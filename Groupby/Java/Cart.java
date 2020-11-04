@@ -1,3 +1,7 @@
+/**
+ * @Author : Anand Kumar Keshavan
+ */
+
 import java.util.ArrayList;
 import java.util.stream.Stream;
  
@@ -5,7 +9,7 @@ import java.util.stream.Stream;
 public class Cart {
 	private final ArrayList<Item> items;
 	  Cart(){
-	  	this.items = new ArrayList<Item> ();
+	  	this.items = new ArrayList<> ();
 	  }
 	  public Cart Add(Item item){
 	  	this.items.add(item);
