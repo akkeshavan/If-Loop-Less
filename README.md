@@ -14,6 +14,7 @@ The folder  contains veersions of this classic interview question "FizzBuzz":
 Usually the core logic of the fizzBuzz for a number is written as follows:
 
 fizzBuzz(num){
+
         if( num % 3=== 0 && num % 5=== 0)
             return "FizzBuzz";
         else if(num%3 ===0 )
