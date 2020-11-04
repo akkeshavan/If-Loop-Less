@@ -36,6 +36,11 @@ const getFinalResult = (str,num) =>{
         true : num.toString(),
         false : str
     };
+    //surprised that this works, and object's key is supposed by a string!! works in Node.js
+    // ifit doesnt  this can be replaced by
+    // const resultMap = new Map();
+    // resultMap.set ... etc and  return resultMap.get 
+    // Same for the function fizzBuzzString(), above 
     return resultMap[str === ""];
 }
 
