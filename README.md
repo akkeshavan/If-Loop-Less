@@ -8,7 +8,7 @@ Why?
 "If Statements" are evil. They can be nested, nested, and nested again, to create what is  known as the 'ladder to hell'. This makes the code hard to test. There are functional programming techniques that allow one to avoid if statements and loops to a large degree.
 
 
-##Fizzbuzz
+## Fizzbuzz
 
 The folder  contains veersions of this classic interview question "FizzBuzz":
 Usually the core logic of the fizzBuzz for a number is written as follows:
@@ -29,7 +29,7 @@ IF-LESS versions have been created in :
 	2. Javascript :  This is very functional abstrcation and has no IF-statement.
 
 
-##GroupBY 
+## GroupBY 
 
 The folder GroupBy contains the code written in various languages for grouping cart items by category and creating sub-totals.
 
