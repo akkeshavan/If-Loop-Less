@@ -1,12 +1,35 @@
 # If-Loop-Less
 Programming without IFs and LOOPS
 
-This series explores the  ways in which IF ELSE-IF chains and Loops can be avoided.
+This series explores the ways in which IF ELSE-IF chains and Loops can be avoided.
 
 Why?
 
 "If Statements" are evil. They can be nested, nested, and nested again, to create what is  known as the 'ladder to hell'. This makes the code hard to test. There are functional programming techniques that allow one to avoid if statements and loops to a large degree.
 
+
+##Fizzbuzz
+
+The folder  contains veersions of this classic interview question "FizzBuzz":
+Usually the core logic of the fizzBuzz for a number is written as follows:
+
+fizzBuzz(num){
+        if( num % 3=== 0 && num % 5=== 0)
+            return "FizzBuzz";
+        else if(num%3 ===0 )
+            return "Fizz"
+        else if(num%3 ===0 )
+            return "Buzz"
+        else
+            return num.toString()
+    }
+
+IF-LESS versions have been created in :
+	1.  Dart -  fizzbuzz1 -simple code fizzbuzz2 : "code with some common code that has been abstracted
+	2. Javascript :  This is very functional abstrcation and has no IF-statement.
+
+
+##GroupBY 
 
 The folder GroupBy contains the code written in various languages for grouping cart items by category and creating sub-totals.
 
