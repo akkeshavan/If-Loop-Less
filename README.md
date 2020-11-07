@@ -6,7 +6,7 @@ This series explores the ways in which IF ELSE-IF chains and Loops can be avoide
 Why?
 
 "If Statements" are evil. They can be nested, nested, and nested again, to create what is  known as the 'ladder to hell'. This makes the code hard to test. There are functional programming techniques that allow one to avoid if statements and loops to a large degree.
-
+(( There has been some flame about about my statement that "If statements are evil". Please go right down to this readme to see why.) :))
 
 ## Fizzbuzz
 
@@ -102,3 +102,52 @@ The rules for all languages are as follows
 
  Have fun!!
  All are welcome to add their own example. They must be language indepenedent in the sense one should be able to use it in typed languages like Java or synamically typed ones like Javascript.
+
+## Why "IF_STATEMENTS" are EVIL?
+
+In the 80's it was common for C programmers to use GOTO statements, even though in 1968 Djikstra had called the "evil". Djisjkstra did not call them because evil beacues it was evil- but becuase of a mathematical reason, mainly realted to to proof correctness. So why did these C programmers use GOTO statements? Beacuse it provided them with a neat way of releasing all the resources ina single point at the end of a function. for Example:
+
+ foo(){
+     int* blah = malloc();
+     int result.
+
+
+     int file = open()
+     if (error{
+         result =null;
+         goto finally;
+     }
+     elseif {
+         do whatever crap
+         result = some correct result
+         goto finally;
+         }
+
+ finally:
+    release memory
+    close files
+    return result;
+
+
+ }
+
+ Admmitedly, this use case was a good one to argue against, especially in an era before execeptions. But one good use case did NOT make Djikstra's statement any less valid. For every one use case, there are million other abuse cases. I had heard a lot of heated defense of the GOTO statement during that period.
+
+Today, it is the same case with IF Statements ( not IF expressions).
+1. if statements encourage creation of nested blocks  ( the famous ladder to hell)
+2. they encourage ad hoc extension of code within the statement blocks, where a fututed developer may add another 50 lines of  nested code. And as this continues, one gets a function that is 1000 lines code with if-elseif-else ladder to hell. Even today, in the age of advanced static code analysers, this is common where the code has evolvled over a few years and (mis)handled by several developers.
+3.The biggest objection however, is that if- elseif -else statements do notevalauet to expressions. so one cannot reason about them and hence formal proof of correctness are difficult, especially when used with mutable variables. There for functional languages like Scala and Erlang use if-expressions-- the evaluate to a value. Similary, Pattern matchers also use match/switch expresions ( even C# supports them now and they are cool). They can be reasoned about.
+
+There is NO reason to use them to write programs:
+           Use : maps
+           Use : if expresions ( ternary expressions without creating a ladder)
+
+I would accept IF Statements only in the case where a compiler enforces:
+    1. a single line of code  in the associate block
+    2. no nesting
+
+That is it.
+
+
+
+
