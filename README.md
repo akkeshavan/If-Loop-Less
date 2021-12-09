@@ -105,7 +105,7 @@ The rules for all languages are as follows
 
 ## Why "IF_STATEMENTS" are EVIL?
 
-In the 80's it was common for C programmers to use GOTO statements, even though in 1968 Djikstra had called the "evil". Djisjkstra did not call them because evil beacues it was evil- but becuase of a mathematical reason, mainly realted to to proof correctness. So why did these C programmers use GOTO statements? Beacuse it provided them with a neat way of releasing all the resources ina single point at the end of a function. for Example:
+In the 80's it was common for C programmers to use GOTO statements, even though in 1968 Djikstra had called the "evil". Djisjkstra did not call them because evil beacues it was evil- but because of a mathematical reason, mainly related to to proof of correctness. So why did these C programmers use GOTO statements? Because  it provided them with a neat way of releasing all the resources in a single point at the end of a function. for Example:
 
  foo(){
      int* blah = malloc();
@@ -136,7 +136,7 @@ In the 80's it was common for C programmers to use GOTO statements, even though 
 Today, it is the same case with IF Statements ( not IF expressions).
 1. if statements encourage creation of nested blocks  ( the famous ladder to hell)
 2. they encourage ad hoc extension of code within the statement blocks, where a fututed developer may add another 50 lines of  nested code. And as this continues, one gets a function that is 1000 lines code with if-elseif-else ladder to hell. Even today, in the age of advanced static code analysers, this is common where the code has evolvled over a few years and (mis)handled by several developers.
-3.The biggest objection however, is that if- elseif -else statements do notevalauet to expressions. so one cannot reason about them and hence formal proof of correctness are difficult, especially when used with mutable variables. There for functional languages like Scala and Erlang use if-expressions-- the evaluate to a value. Similary, Pattern matchers also use match/switch expresions ( even C# supports them now and they are cool). They can be reasoned about.
+3.The biggest objection however, is that if- elseif -else statements do not evaluate to expressions. so one cannot reason about them and hence formal proof of correctness are difficult, especially when used with mutable variables. There for functional languages like Scala and Erlang that use if-expressions-- the evaluate to a value. Similary, Pattern matchers also use match/switch expressions ( even C# supports them now and they are cool). They can be reasoned about.
 
 There is NO reason to use them to write programs:
            Use : maps
